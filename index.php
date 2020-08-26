@@ -18,5 +18,6 @@
     //mysqli_close($con);
 
     $nome=$_GET["nome"];
-    echo "O nome é: ".$nome;
+    $sobrenome=$_GET["sobrenome"]
+    echo "O nome é: ".$nome." ".$sobrenome;
 ?>
