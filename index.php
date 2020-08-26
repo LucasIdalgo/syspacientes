@@ -3,12 +3,12 @@
     $con=mysqli_connect(
         "localhost",
         "root",
-        "123456",
+        "",
         "syspacientes"
     );
 
     if(!$con){
-        echo("Error: ".PHP_EOL);
+        echo("Error: ".php_eol);
         exit;
     }
     echo "Conectou!!";
