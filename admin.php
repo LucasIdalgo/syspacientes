@@ -23,7 +23,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
   </head>
 
   <body>
@@ -71,11 +71,11 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-         <div class="shadow-lg p-3 mb-5 bg-white rounded">
+         <!--<div class="shadow-lg p-3 mb-5 bg-white rounded">-->
             <?php
                echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
             ?>
-         </div>
+         <!--</div>-->
          <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
       </div>
 
