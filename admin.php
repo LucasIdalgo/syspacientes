@@ -21,6 +21,7 @@
     <link rel="icon" href="img/favicon/favicon2.ico">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
 
     <!-- Custom styles for this template -->
     <link href="css/navbar.css" rel="stylesheet">
@@ -71,7 +72,11 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-         
+         <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <?php
+               echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
+            ?>
+         </div>
          <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
       </div>
 
