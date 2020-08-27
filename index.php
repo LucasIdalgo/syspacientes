@@ -17,12 +17,7 @@
    mysqli_close($con);  
    */
    $onload = "";
-   $erro="";
-   if(empty($onload)){
-      header("index.php?erro=$erro");
-   }else{
-      $erro   = $_GET['erro'];
-   }   
+   $erro   = $_GET['erro'];
    if(strlen($erro) > 0){
       $onload = "onload='alert(\"$erro\")'";
    }

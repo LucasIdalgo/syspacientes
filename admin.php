@@ -29,7 +29,7 @@
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/3.4/examples/navbar/navbar.css" rel="stylesheet">
-  </head>
+</head>
 
   <body>
 
@@ -87,5 +87,5 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
+  </body>
 </html>
