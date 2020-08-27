@@ -51,8 +51,8 @@
     <form class="form-signin"
     method="post"
     action="redirect.php"
-    onsubmit="return validaTela()"
-    >        
+    >   
+    <!--onsubmit="return validaTela()"-->     
       <img class="mb-4" src="img/login.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Entre em sua conta</h1>
       <label for="inputEmail" class="sr-only">Email</label>
