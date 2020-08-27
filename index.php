@@ -62,7 +62,7 @@
       <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email" required autofocus>
       <label for="inputPassword" class="sr-only">Senha</label>
       <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Senha" required>
-      <input type="hiden" id="erro" name="erro">
+      <input type="hidden" id="erro" name="erro">
       
       <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       <p class="mt-5 mb-3 text-muted">Lucas Idalgo &copy; 2018-2021</p>
