@@ -18,7 +18,7 @@
    */
    $onload = "";
    if(empty($onload)){
-      header("location:index.php?erro=");
+      header("index.php?erro=");
    }else{
       $erro   = $_GET['erro'];
    }   
