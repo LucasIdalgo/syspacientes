@@ -18,9 +18,9 @@
    */
    $onload = "";
    //$erro   = $_GET['erro'];
-   if(strlen($erro) > 0){
-      $onload = "onload='alert(\"$erro\")'";
-   }
+   //if(strlen($erro) > 0){
+     // $onload = "onload='alert(\"$erro\")'";
+   //}
  ?>
  <!DOCTYPE html>
  <html lang="pt-br">
