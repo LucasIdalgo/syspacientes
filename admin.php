@@ -22,21 +22,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="navbar.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -57,7 +44,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="#">Inicio</a></li>
               <li><a href="#">Sobre</a></li>
               <li><a href="#">Nos contate!</a></li>
               <li class="dropdown">
@@ -84,12 +71,12 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-      <div class="shadow-lg p-3 mb-5 bg-white rounded">
-         <?php
-         echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
-         ?>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+         <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <?php
+               echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
+            ?>
          </div>
+         <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
       </div>
 
     </div> <!-- /container -->
