@@ -2,13 +2,14 @@
     $email=$_POST["inputEmail"];
     $senha=$_POST["inputPassword"];
     $validou=true;
+    $erro="";
 
     //validar senha
     if(strlen($senha)<6){
-        //echo "Senha menor que 6 caracteres";
+        $erro= "Senha menor que 6 caracteres";
         $validou=false;
     }else if(strlen($senha)>6){
-        //echo "Senha maior que 6 caracteres";
+        $erro="Senha maior que 6 caracteres";
         $validou=false;
     }
 
@@ -16,7 +17,7 @@
     if($validou){
         echo "<hr>Email: ".$email."<br>Senha: ".$senha;
     }else{
-        header("location:index.php");
+        header("location:index.php?erro=$erro");
     }    
 
 ?>
