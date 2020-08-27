@@ -17,6 +17,7 @@
 
     //mysqli_close($con);
     $onload="";
+    $erro="";
     $erro=$_GET["erro"];
     if(strlen($erro)>0){
         $onload="onload='alert(\"$erro\")'";
