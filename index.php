@@ -17,7 +17,6 @@
    mysqli_close($con);  
    */
    $onload = "";
-   echo "<input type=\"hidden\" id=\"erro\" name=\"erro\" value=\"\">";
    $erro   = $_GET['erro'];
    if(strlen($erro) > 0){
       $onload = "onload='alert(\"$erro\")'";
