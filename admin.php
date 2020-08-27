@@ -26,8 +26,12 @@
     <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
-   <?php
-      echo "<span class=\"border border-dark\"><h3><b>Bem vindo: ". $nome_usuario . "</b></h3></span>";
-   ?>
+   <div class="shadow-lg p-3 mb-5 bg-white rounded">
+      <span class="border border-dark">
+         <?php
+            echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
+         ?>
+      </span>
+   </div>
 </body>
 </html>
