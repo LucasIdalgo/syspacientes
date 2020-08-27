@@ -27,7 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicons/favicon.ico">
+    <link rel="icon" href="img/favicon/favicon2.ico">
     <title>Syspacientes</title>
 
     <!-- Bootstrap core CSS -->
