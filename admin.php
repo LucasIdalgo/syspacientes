@@ -27,11 +27,9 @@
 </head>
 <body>
    <div class="shadow-lg p-3 mb-5 bg-white rounded">
-      <span class="border border-dark">
-         <?php
-            echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
-         ?>
-      </span>
+      <?php
+         echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
+      ?>
    </div>
 </body>
 </html>
