@@ -17,7 +17,11 @@
    mysqli_close($con);  
    */
    $onload = "";
-   $erro   = $_GET['erro'];
+   if(empty($onload)){
+      header("location:index.php?erro=");
+   }else{
+      $erro   = $_GET['erro'];
+   }   
    if(strlen($erro) > 0){
       $onload = "onload='alert(\"$erro\")'";
    }

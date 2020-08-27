@@ -16,12 +16,16 @@
 <html lang="pt-br">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>SysPacientes - ADM</title>
     <link rel="icon" href="img/favicon/favicon2.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
+    
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/3.4/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://getbootstrap.com/docs/3.4/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/3.4/examples/navbar/navbar.css" rel="stylesheet">
@@ -70,15 +74,12 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <div class="shadow-lg p-3 mb-5 bg-white rounded">
-        <?php
-          echo "<h3>Bem vindo ". $nome_usuario . "</h3>";
-        ?>
-      </div>
-
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-         <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+      <?php
+          echo "<h3><center>Bem vindo ". $nome_usuario . "!!</center></h3>";
+        ?>
+         <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
       </div>
     </div> <!-- /container -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
