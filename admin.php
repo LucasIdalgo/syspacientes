@@ -47,9 +47,9 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Inicio</a></li>
               <li><a href="#">Sobre</a></li>
-              <li><a href="#">Nos contate!</a></li>
+              <li><a href="#">Nos contate</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista para baixo <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -62,7 +62,7 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="./">Padrão <span class="sr-only">(current)</span></a></li>
               <li><a href="../navbar-static-top/">Static top</a></li>
               <li><a href="../navbar-fixed-top/">Fixed top</a></li>
             </ul>
@@ -70,16 +70,21 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <?php
-               echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
-            ?>
-         </div>
-         <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+      <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <?php
+          echo "<h3>Bem vindo ". $nome_usuario . "</h3>";
+        ?>
       </div>
 
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+         <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+      </div>
     </div> <!-- /container -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
