@@ -27,7 +27,7 @@
 </head>
 <body>
    <?php
-      echo "<h3>Bem vindo: ". $nome_usuario . "</h3>";
+      echo "<span class=\"border border-dark\"><h3><b>Bem vindo: ". $nome_usuario . "</b></h3></span>";
    ?>
 </body>
 </html>
