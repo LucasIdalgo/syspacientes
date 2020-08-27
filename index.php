@@ -17,7 +17,7 @@
 
     //mysqli_close($con);
     $onload="";
-    $erro=$_GET["erro"];
+    $erro=$_GET['erro'];
     if(strlen($erro)>0){
         $onload="onload='alert(\"$erro\")'";
     }
@@ -28,7 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon/favicon2.ico">
-    <title>Syspacientes</title>
+    <title>SysPacientes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,8 +46,6 @@
                 alert("Senha maior que 6 caracteres");
                 resposta=false;
             }
-
-
             return resposta;
         }
     </script>
