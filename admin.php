@@ -1,8 +1,10 @@
 <?php
+   session_start();
    require_once('variaveis.php');
    require_once('conexao.php');
 
    $id_usuario = $_GET["id_usuario"];
+   $id_usuario_session=$_SESSION['id_usuario'];
    $nome_usuario = "";
 
    $sql = "SELECT nome FROM usuarios WHERE id = " . $id_usuario;
@@ -76,10 +78,9 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-      <?php
-          echo "<h3><center>Bem vindo ". $nome_usuario . "!!</center></h3>";
-        ?>
-         <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
+        <h1>Sistema de Pacientes!!</h1>
+        <p>Bem vindo<?php echo($id_usuario_session)?></p>
+        <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
       </div>
     </div> <!-- /container -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
