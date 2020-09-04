@@ -3,10 +3,10 @@ session_start();
 require_once('variaveis.php');
 require_once('conexao.php');
 
-$idUsuario = filter_input(INPUT_POST, 'inputIdUsuario', FILTER_SANITIZE_NUMBER_INT);
-$nomeUsuario = filter_input(INPUT_POST, 'inputNome', FILTER_SANITIZE_STRING);
-$emailUsuario = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
-$senhaUsuario = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
+$idUsuario = $_POST['inputIdUsuario'];
+$nomeUsuario = $_POST['inputNome'];
+$emailUsuario = $_POST['inputEmail'];
+$senhaUsuario = $_POST['inputPassword'];
 
 
 $sql= "UPDATE usuarios SET nome='$nomeUsuario', email='$emailUsuario', senha='$senhaUsuario' WHERE id='$idUsuario'";
