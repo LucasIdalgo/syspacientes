@@ -5,6 +5,12 @@
    $email      = $_POST["inputEmail"];
    $senha      = $_POST["inputPassword"];
 
+   //validando variaveis:
+   if(strlen(trim($email)) == 0 &&
+      strlen(trim($senha)) == 0){
+      header("location: index.php");
+   }
+
    //iniciando sessao
    session_start();
    $_SESSION['id_usuario']=0;
@@ -30,10 +36,12 @@
 
    //exibir ou retornar:
    if($validou){
-      echo "<hr>";
+      /*echo "<hr>";
       echo "E-mail: " . $email."<br>";
       echo "Senha: ".$senha;
       header("location:admin.php?id_usuario=$id_usuario");
+      */
+      $_SESSION['$id_usuario']=$id_usuario;
    }else{
       header("location:index.php?erro=$erro");
    }
