@@ -17,10 +17,10 @@
    mysqli_close($con);  
    */
    $onload = "";
-   /*$erro   = $_GET['erro'];
+   $erro   = $_GET['erro'];
    if(strlen($erro) > 0){
       $onload = "onload='alert(\"$erro\")'";
-   }*/
+   }
  ?>
  <!DOCTYPE html>
  <html lang="pt-br">

@@ -4,22 +4,21 @@
    require_once('conexao.php');
 
    //$id_usuario = $_GET["id_usuario"];
-
+   
    //recuperando dados da sessao
-   $id_usuario   = $_SESSION["id_usuario"];
-   $tipoAcesso   = $_SESSION["tipo_acesso"]; 
+   $id_usuario   = $_SESSION["id_usuario"];   
    $nome_usuario = "";
 
-  //validar se codigo do usuario esta na sesao
-  if(strlen($id_usuario) == 0){
-    header("location: index.php");
-  }
+   //validar se codigo do usuario esta na sesao
+   if(strlen($id_usuario) == 0){
+      header("location: index.php");
+   }
 
    $sql = "SELECT nome FROM usuarios WHERE id = " . $id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
-   }
+   }   
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,8 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
-  <body>
+<body>
 
     <div class="container">
 
@@ -50,23 +48,17 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="admin.php">Inicio <span class="sr-only">(current)</span></a>
+            <li class="nav-item ">
+              <a class="nav-link" href="admin.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <?php 
-            if($tipoAcesso != 3) {
-            ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown09">
-                  <a class="dropdown-item" href="#">Cadastrar pessoas</a>
-                  <a class="dropdown-item" href="usuario_list2.php">Cadastrar usuários</a>                
-                  <a class="dropdown-item" href="#">Cadastrar pacientes</a>
-                </div>
-              </li>
-            <?php
-            }
-            ?>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown09">
+                <a class="dropdown-item" href="#">Cadastro de pessoas</a>
+                <a class="dropdown-item" href="usuario_list.php">Cadastro de usuários</a>                
+                <a class="dropdown-item" href="#">Cadastro de pacientes</a>
+              </div>
+            </li>
           </ul>  
           <ul class="navbar-nav navbar-right">
             <li class="nav-item dropdown">
@@ -84,21 +76,41 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Sistema de Pacientes</h1>
-        <p>Bem vindo<?php echo($nome_usuario)?></p>
-        <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
+        <h1>Listagem de usuários:</h1>
+        <table class="table">
         <p>
-          <a class="btn btn-lg btn-primary" href="cadastrar.php" role="button">Cadastrar</a>
-        </p>
-        <p>
-        <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar usuário</a>-->
-        </p>
-        <p>
-         <a class="btn btn-lg btn-danger" href="logout.php" role="button">Sair</a>
-        </p>
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Nome</th>
+               <th scope="col">E-mail</th>
+               <th scope="col">...</th>
+            </tr>
+         </thead>
+         <tbody>
+            <?php
+               $sql = "SELECT id, nome, email FROM usuarios ORDER BY Nome";
+               $resp = mysqli_query($conexao_bd, $sql);
+               while($rows=mysqli_fetch_row($resp)){
+                  $idUsuario   = $rows[0];
+                  $nomeUsuario = $rows[1];
+                  $email       = $rows[2];
+                  echo("<tr>");
+                  echo("<th scope='row'>$idUsuario</td>");
+                  echo("<td>$nomeUsuario</td>");
+                  echo("<td>$email</td>");
+                  echo("<td>");
+                  echo("<a class='btn btn-lg btn-success' href='usuario.php?idUsuario=$idUsuario' role='button'>Editar</a>&nbsp;");
+                  echo("<a class='btn btn-lg btn-danger' href='usuario_excluir.php?idUsuario=$idUsuario' role='button'>Excluir</a>");
+                  echo("</td>");
+                  echo("</tr>");
+               }                
+            ?>
+         </tbody>
+        </table>
+        </p>        
       </div>
-    </div> <!-- /container -->
-
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.12.4.min.js"><\/script>')</script>
@@ -106,5 +118,5 @@
     <?php
     mysqli_close($conexao_bd);
     ?>
-  </body>
+</body>
 </html>

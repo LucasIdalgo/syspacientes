@@ -1,66 +1,33 @@
 <?php
-session_start();
-require_once('variaveis.php');
-require_once('conexao.php');
+   session_start();
+   require_once('variaveis.php');
+   require_once('conexao.php');
 
-$idUsuario = $_POST['inputIdUsuario'];
-$nomeUsuario = $_POST['inputNome'];
-$emailUsuario = $_POST['inputEmail'];
-$senhaUsuario = $_POST['inputPassword'];
-
-
-$sql= "UPDATE usuarios SET nome='$nomeUsuario', email='$emailUsuario', senha='$senhaUsuario' WHERE id='$idUsuario'";
-$resp  = mysqli_query($conexao_bd, $sql);
-
-
-//if(mysqli_affected_rows($conexao_bd)){
-//    echo "Alterou!!!";
-//}else{
-//    echo "Não alterou!!!";
-//}
-
+   $senha       = $_POST["inputPassword"];
+   $email       = $_POST["inputEmail"];
+   $nome        = $_POST["inputNome"];
+   $tipo_acesso = $_POST["lstTipoAcesso"];
+   $id_usuario  = $_POST["inputIdUsuario"];
+   
+   if(strlen($id_usuario) > 0){
+      if($id_usuario != 0){
+         //atualizar
+         $sql = "UPDATE usuarios SET 
+                  nome='$nome', 
+                  email='$email', 
+                  senha='$senha',
+                  tipo_acesso= $tipo_acesso
+                 WHERE id = $id_usuario";
+      }else{
+         //insert
+         $sql = "INSERT INTO usuarios(   nome,    email,    senha,tipo_acesso)
+                               VALUES('$nome', '$email', '$senha',$tipo_acesso)";
+      }
+      mysqli_query($conexao_bd, $sql);
+   }else{
+      //erro!
+   }
+   mysqli_close($conexao_bd);
+   header("location:usuario_list2.php");
+   
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SysPacientes - Usuário editado</title>
-    <link rel="icon" href="img/favicon/favicon2.ico">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Usuário <?php echo($nomeUsuario); ?> editado com sucesso!!!</h1>
-    <h1>Resultado:<hr></h1>      
-
-         <input type="hidden" id="inputIdUsuario" 
-                name="inputIdUsuario" 
-                value="<?php echo($idUsuario) ?>">
-
-    <div class="form-group">
-         <label for="inputNome">Nome:</label>
-         <input type="text" readonly=“true” class="form-control" id="inputNome" 
-                name="inputNome" placeholder="Nome do usuário"
-                value="<?php echo($nomeUsuario); ?>"
-                >
-      </div>
-      <div class="form-group">
-         <label for="inputEmail">E-mail:</label>
-         <input type="email" readonly=“true” class="form-control" id="inputEmail" 
-                name="inputEmail" placeholder="E-mail"
-                value="<?php echo($emailUsuario); ?>"
-                >
-      </div>
-      <div class="form-group">
-         <label for="inputPassword">Senha:</label>
-         <input type="text" readonly=“true” class="form-control" id="inputPassword" 
-                name="inputPassword" 
-                value="<?php echo($senhaUsuario);?>">
-      </div>
-
-    <hr>
-    <a href="admin.php" class="btn btn-warning" role="button">Voltar</a>
-</body>
-</html>
