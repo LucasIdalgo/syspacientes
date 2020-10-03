@@ -148,7 +148,7 @@
                <label for="inputCEP">CEP:</label>
                <input type="text" class="form-control" id="inputCEP" 
                      name="inputCEP" placeholder="CEP do endereco da pessoa"
-                     maxlength="10"
+                     maxlength="10" required
                      value="<?php echo($cepPessoa); ?>"
                      >
             </div>
@@ -188,7 +188,7 @@
                      >
             </div>
             <div class="form-group">
-               <label for="inputTelefone">Telfone:</label>
+               <label for="inputTelefone">Telefone:</label>
                <input type="text" class="form-control" id="inputTelefone" 
                      name="inputTelefone" placeholder="Telefone da pessoa"
                      maxlenght="10"
