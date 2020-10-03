@@ -57,14 +57,14 @@
           <!--onsubmit="return validaTela()"-->
           
       <img class="mb-4" src="img/login.png" alt="" width="80" height="80">
-      <h1 class="h3 mb-3 font-weight-normal">Insira suas credenciais</h1>
-      <label for="inputEmail" class="sr-only">Endereço de e-mail</label>
-      <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Endereço de E-mail" required autofocus>
+      <h1 class="h3 mb-3 font-weight-normal">Entre em sua conta</h1>
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email" required autofocus>
       <label for="inputPassword" class="sr-only">Senha</label>
       <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Senha" required>
       
       <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-      <p class="mt-5 mb-3 text-muted">Nome de vocês &copy; 2017-2018</p>
+      <p class="mt-5 mb-3 text-muted">Lucas Idalgo &copy; 2018-2021</p>
     </form>
   </body>
  </html>

@@ -88,9 +88,6 @@
         <p>Bem vindo<?php echo($nome_usuario)?></p>
         <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
         <p>
-          <a class="btn btn-lg btn-primary" href="cadastrar.php" role="button">Cadastrar</a>
-        </p>
-        <p>
         <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar usuário</a>-->
         </p>
         <p>
