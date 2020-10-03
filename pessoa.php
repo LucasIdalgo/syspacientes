@@ -61,8 +61,8 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <script scr="js/jquery.mask.min.js"></script>
-   <script scr="js/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
    <script type="text/javascript">                
         $(document).ready(function(){
@@ -138,7 +138,7 @@
             </div>
             <div class="form-group">
                <label for="inputDataNasc">Data de nascimento:</label>
-               <input type="date" class="form-control" id="inputDataNasc" 
+               <input type="text" class="form-control" id="inputDataNasc" 
                      name="inputDataNasc" placeholder="Data de nascimento da pessoa" 
                      maxlength="10" required
                      value="<?php echo($datanascPessoa); ?>"
