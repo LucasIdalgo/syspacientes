@@ -38,7 +38,7 @@
       }else{
          //insert
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, 
-         telefone, celular, email) VALUES('$nome', '$endereco', $numero, $comp, '$cidade', '$estado', '$cep',
+         telefone, celular, email) VALUES('$nome', '$endereco', $numero, '$comp', '$cidade', '$estado', '$cep',
                                '$dataNasc', '$telefone', '$celular', '$email')";
       }
       mysqli_query($conexao_bd, $sql);

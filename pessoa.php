@@ -153,14 +153,14 @@
             <div class="form-group">
                <label for="inputEndereco">Endereço:</label>
                <input type="text" class="form-control" id="inputEndereco" 
-                     name="inputEndereco" placeholder="Endereco da pessoa"
+                     name="inputEndereco" placeholder="Endereco da pessoa" required
                      value="<?php echo($endPessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputNumero">Numero da residência:</label>
                <input type="number" class="form-control" id="inputNumero" 
-                     name="inputNumero" placeholder="Numero da residencia da pessoa"
+                     name="inputNumero" placeholder="Numero da residencia da pessoa" required
                      value="<?php echo($numeroPessoa); ?>"
                      >
             </div>
@@ -195,7 +195,7 @@
             <div class="form-group">
                <label for="inputCelular">Celular:</label>
                <input type="text" class="form-control" id="inputCelular" 
-                     name="inputCelular" placeholder="Celular"
+                     name="inputCelular" placeholder="Celular" required
                      value="<?php echo($celularPessoa); ?>"
                      >
             </div> 
