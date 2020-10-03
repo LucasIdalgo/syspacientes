@@ -136,8 +136,7 @@
                      echo("<td>");
                      if($tipoAcesso == 1){
                         echo("<a class='btn btn-lg btn-success' href='pessoa.php?idPessoa=$id' role='button'>Editar</a>&nbsp;");
-                        if($id != $id_usuario)
-                          echo("<a class='btn btn-lg btn-danger'  href='javascript:excluirPessoa($id)' role='button'>Excluir</a>");
+                        echo("<a class='btn btn-lg btn-danger'  href='javascript:excluirPessoa($id)' role='button'>Excluir</a>");
                      }else{
                        echo("-");
                      }

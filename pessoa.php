@@ -28,8 +28,8 @@
    $compPessoa     = 0;
    $cidadePessoa   = "";
    $estadoPessoa   = '';
-   $telefonePessoa = 0;
-   $celularPessoa  = 0;
+   $telefonePessoa = "";
+   $celularPessoa  = "";
    $emailPessoa    = "";
 
    if($idPessoa != 0){
@@ -62,6 +62,18 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <script type="text/javascript">
+      function validaTela(){
+         var resposta = true;
+         var nome = document.getElementById("inputName").value;
+         if(nome.length > 100){
+            alert('Nome maior que 100 caracteres');
+            resposta = false;
+         }
+         return resposta;
+      }
+    </script>
 </head>
 <body>
    <div class="container">
@@ -109,7 +121,7 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <?php
-         if($idUsuario != 0){
+         if($idPessoa != 0){
             echo("<h1>Editando a pessoa: $nomePessoa</h1>");
          }else{
             echo("<h1>Cadastro de nova pessoa:</h1>");
@@ -129,6 +141,7 @@
                <label for="inputDataNasc">Data de nascimento:</label>
                <input type="text" class="form-control" id="inputDataNasc" 
                      name="inputDataNasc" placeholder="Data de nascimento da pessoa"
+                     data_mask="##/##/####" maxlength="10"
                      value="<?php echo($datanascPessoa); ?>"
                      >
             </div>

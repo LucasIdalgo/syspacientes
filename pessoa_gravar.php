@@ -16,7 +16,8 @@
    $celular    = $_POST["inputCelular"];
    $email      = $_POST["inputEmail"];
    
-   
+   //convertendo nome para maiusculo
+   $nome = strtoupper($nome);
    
    if(strlen($id_pessoa) > 0){
       if($id_pessoa != 0){
