@@ -75,10 +75,8 @@
          }
          return resposta;
       }
-      function($){
-            $("#inputDataNasc").mask("00/00/0000");
-            $("#inputCEP").mask("00.000-000");
-        }
+      $("#inputDataNasc").mask("00/00/0000");
+      $("#inputCEP").mask("00.000-000");
     </script>
 </head>
 <body>
@@ -168,14 +166,14 @@
             </div>
             <div class="form-group">
                <label for="inputNumero">Numero da residência:</label>
-               <input type="text" class="form-control" id="inputNumero" 
+               <input type="number" class="form-control" id="inputNumero" 
                      name="inputNumero" placeholder="Numero da residencia da pessoa"
                      value="<?php echo($numeroPessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputComp">Complemento do endereço:</label>
-               <input type="text" class="form-control" id="inputComp" 
+               <input type="number" class="form-control" id="inputComp" 
                      name="inputComp" placeholder="Complemento do endereço da pessoa"
                      value="<?php echo($compPessoa); ?>"
                      >
@@ -196,14 +194,14 @@
             </div>
             <div class="form-group">
                <label for="inputTelefone">Telfone:</label>
-               <input type="number" class="form-control" id="inputTelefone" 
+               <input type="text" class="form-control" id="inputTelefone" 
                      name="inputTelefone" placeholder="Telefone da pessoa"
                      value="<?php echo($telefonePessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputCelular">Celular:</label>
-               <input type="number" class="form-control" id="inputCelular" 
+               <input type="text" class="form-control" id="inputCelular" 
                      name="inputCelular" placeholder="Celular"
                      value="<?php echo($celularPessoa); ?>"
                      >
