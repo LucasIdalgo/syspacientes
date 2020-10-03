@@ -183,7 +183,8 @@
             <div class="form-group">
                <label for="inputEstado">Estado:</label>
                <input type="text" class="form-control" id="inputEstado" 
-                     name="inputEstado" placeholder="Estado da pessoa" required
+                     name="inputEstado" placeholder="UF do estado da pessoa" 
+                     maxlength="2" required
                      value="<?php echo($estadoPessoa); ?>"
                      >
             </div>
