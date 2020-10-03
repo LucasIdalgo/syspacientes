@@ -62,6 +62,8 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="js/jquery.mask.min.js" rel="stylesheet">
+   
     <script type="text/javascript">
       function validaTela(){
          var resposta = true;
