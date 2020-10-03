@@ -4,22 +4,22 @@
    require_once('conexao.php');
 
    //$id_usuario = $_GET["id_usuario"];
-
+   
    //recuperando dados da sessao
-   $id_usuario   = $_SESSION["id_usuario"];
+   $id_usuario   = $_SESSION["id_usuario"]; 
    $tipoAcesso   = $_SESSION["tipo_acesso"]; 
    $nome_usuario = "";
 
-  //validar se codigo do usuario esta na sesao
-  if(strlen($id_usuario) == 0){
-    header("location: index.php");
-  }
+   //validar se codigo do usuario esta na sesao
+   if(strlen($id_usuario) == 0){
+      header("location: index.php");
+   }
 
    $sql = "SELECT nome FROM usuarios WHERE id = " . $id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
-   }
+   }   
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -85,7 +85,7 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Sistema de Pacientes</h1>
-        <p>Bem vindo <?php echo($nome_usuario)?></p>
+        <p>Bem vindo <?php echo($nome_usuario);?></p>
         <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
         <p>
         <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar usuário</a>-->
@@ -103,5 +103,5 @@
     <?php
     mysqli_close($conexao_bd);
     ?>
-  </body>
+</body>
 </html>
