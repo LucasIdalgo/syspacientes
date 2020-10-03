@@ -46,7 +46,7 @@
       */
       $_SESSION['$id_usuario']=$id_usuario;
       $_SESSION["tipo_acesso"] = $tipo_acesso;
-      header("location:admin.php");
+      header("location:admin.php?idusuario=$id_usuario");
    }else{
       header("location:index.php?erro=$erro");
    }

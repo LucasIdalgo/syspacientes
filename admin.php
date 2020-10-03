@@ -10,8 +10,6 @@
    $tipoAcesso   = $_SESSION["tipo_acesso"]; 
    $nome_usuario = "";
 
-   header("location: admin.php?$id_usuario");
-
    //validar se codigo do usuario esta na sesao
    if(strlen($id_usuario) == 0){
       header("location: index.php");
