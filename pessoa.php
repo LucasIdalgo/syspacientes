@@ -208,6 +208,7 @@
                <label for="inputEmail">E-mail:</label>
                <input type="email" class="form-control" id="inputEmail" 
                      name="inputEmail" placeholder="E-mail"
+                     maxlength="100"
                      value="<?php echo($emailPessoa); ?>"
                      >
             </div>          

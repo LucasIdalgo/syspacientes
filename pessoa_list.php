@@ -131,7 +131,11 @@
                         echo("<td>$end, $numero</td>");
                     }                        
                      echo("<td>$cidade/$estado</td>");
-                     echo("<td>$telefone/$celular</td>");                   
+                     if(strlen($telefone)>0){
+                        echo("<td>$telefone/$celular</td>");
+                     }else{
+                        echo("<td>$celular</td>");
+                     }                     
                      echo("<td>$email</td>");
                      echo("<td>");
                      if($tipoAcesso == 1){

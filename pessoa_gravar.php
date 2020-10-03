@@ -23,18 +23,18 @@
       if($id_pessoa != 0){
          //atualizar
          $sql = "UPDATE pessoas SET 
-                  nome='$nome', 
-                  endereco='$endereco',
-                  numero= $numero,
-                  complemento='$comp',
-                  cidade='$cidade',
-                  estado='$estado',
-                  cep='$cep',
-                  datanascimento='$dataNasc',
-                  telefone='$telefone',
-                  celular='$celular',
-                  email='$email' 
-                  WHERE id = $id_pessoa";
+                  nome           ='$nome', 
+                  endereco       ='$endereco',
+                  numero         = $numero,
+                  complemento    ='$comp',
+                  cidade         ='$cidade',
+                  estado         ='$estado',
+                  cep            ='$cep',
+                  datanascimento ='$dataNasc',
+                  telefone       ='$telefone',
+                  celular        ='$celular',
+                  email          ='$email' 
+                  WHERE idPessoa = $id_pessoa";
       }else{
          //insert
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, 
