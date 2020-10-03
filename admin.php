@@ -85,7 +85,7 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Sistema de Pacientes</h1>
-        <p>Bem vindo<?php echo($nome_usuario)?></p>
+        <p>Bem vindo <?php echo($nome_usuario)?></p>
         <a class="btn btn-lg btn-primary" href="#" role="button">Ver documentos NavBar &raquo;</a>
         <p>
         <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar usuário</a>-->
