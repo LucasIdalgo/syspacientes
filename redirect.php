@@ -10,15 +10,15 @@
       strlen(trim($senha)) == 0){
       header("location: index.php");
    }
-
+   
    //iniciando sessao
    session_start();
-   $_SESSION['id_usuario']=0;
+   $_SESSION["id_usuario"]  = 0;
    $_SESSION["tipo_acesso"] = 2;
 
-   $validou    = false;
-   $erro       = "Nenhuma credencial encontrada!";
-   $id_usuario = 0;
+   $validou     = false;
+   $erro        = "Nenhuma credencial encontrada!";
+   $id_usuario  = 0;
    $tipo_acesso = 2;
 
    //validar login
@@ -42,11 +42,10 @@
       /*echo "<hr>";
       echo "E-mail: " . $email."<br>";
       echo "Senha: ".$senha;
-      header("location:admin.php?id_usuario=$id_usuario");
       */
-      $_SESSION['$id_usuario']=$id_usuario;
+      $_SESSION["id_usuario"]  = $id_usuario;
       $_SESSION["tipo_acesso"] = $tipo_acesso;
-      header("location:admin.php?idusuario=$id_usuario");
+      header("location:admin.php");
    }else{
       header("location:index.php?erro=$erro");
    }
