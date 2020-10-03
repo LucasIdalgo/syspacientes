@@ -7,7 +7,7 @@
 
    //verifico se é vazio:
    if(strlen($idPessoa) > 0){
-      $sql = "DELETE FROM pessoas WHERE id = " .$idPessoa;
+      $sql = "DELETE FROM pessoas WHERE idPessoa = " .$idPessoa;
       mysqli_query($conexao_bd, $sql);
    }else{
       //erro!

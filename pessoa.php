@@ -24,8 +24,8 @@
    $datanascPessoa = "";
    $cepPessoa      = "";
    $endPessoa      = "";
-   $numeroPessoa   = 0;
-   $compPessoa     = 0;
+   $numeroPessoa   = "";
+   $compPessoa     = "";
    $cidadePessoa   = "";
    $estadoPessoa   = '';
    $telefonePessoa = "";
@@ -62,17 +62,20 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-   <script type="text/javascript">
+    <script type="text/javascript">
       function validaTela(){
          var resposta = true;
-         var nome = document.getElementById("inputName").value;
-         if(nome.length > 100){
+         var nome = document.getElementById("inputNome").value;
+         if(nome.length > 6){
             alert('Nome maior que 100 caracteres');
             resposta = false;
          }
          return resposta;
       }
+      function($){
+            $("#inputDataNasc").mask("00/00/0000");
+            $("#inputCEP").mask("00.000-000");
+        }
     </script>
 </head>
 <body>
@@ -129,19 +132,20 @@
         ?>
         <form
             method="post"
-            action="pessoa_gravar.php">
+            action="pessoa_gravar.php"
+            onsubmit="return validaTela()">
+            
             <div class="form-group">
                <label for="inputNome">Nome da pessoa:</label>
                <input type="text" class="form-control" id="inputNome" 
                      name="inputNome" placeholder="Nome da pessoa" required autofocus
-                     value="<?php echo($nomePessoa); ?>"
+                     value="<?php echo($nomePessoa);?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputDataNasc">Data de nascimento:</label>
                <input type="text" class="form-control" id="inputDataNasc" 
-                     name="inputDataNasc" placeholder="00/00/0000" title="Data de nascimento da pessoa"
-                     data-mask="00/00/0000" maxlength="10" autocomplete="off" required
+                     name="inputDataNasc" placeholder="Data de nascimento da pessoa" required
                      value="<?php echo($datanascPessoa); ?>"
                      >
             </div>
@@ -149,7 +153,6 @@
                <label for="inputCEP">CEP:</label>
                <input type="text" class="form-control" id="inputCEP" 
                      name="inputCEP" placeholder="CEP do endereco da pessoa"
-                     data_mask="##.###-###" maxlength="10"
                      value="<?php echo($cepPessoa); ?>"
                      >
             </div>
