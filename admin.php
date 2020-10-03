@@ -10,6 +10,8 @@
    $tipoAcesso   = $_SESSION["tipo_acesso"]; 
    $nome_usuario = "";
 
+   header("location: admin.php?$id_usuario");
+
    //validar se codigo do usuario esta na sesao
    if(strlen($id_usuario) == 0){
       header("location: index.php");
@@ -19,7 +21,6 @@
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
-      header("location: admin.php?$nome_usuario");
    }   
 ?>
 <!DOCTYPE html>
