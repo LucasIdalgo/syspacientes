@@ -19,6 +19,7 @@
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
+      header("location: admin.php?$nome_usuario");
    }   
 ?>
 <!DOCTYPE html>
