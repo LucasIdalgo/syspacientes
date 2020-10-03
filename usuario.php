@@ -5,19 +5,19 @@
 
    $idUsuario = $_GET['idUsuario'];
 
-   //recuperando dados da sessão
+   //recuperando dados da sessao
    $id_usuario   = $_SESSION["id_usuario"];
    $tipoAcesso   = $_SESSION["tipo_acesso"];    
    $nome_usuario = "";
-
+   
    $sql = "SELECT nome FROM usuarios WHERE id = ".$id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
    }
-   
-    //verificar se o parametro de id de edição está vazio:   
-      if(strlen($idUsuario)==0) 
+
+   //verificar se o parametro de id de edição está vazio:   
+   if(strlen($idUsuario)==0) 
       $idUsuario = 0;
 
    $nomeUsuario  = "";
@@ -40,6 +40,7 @@
          $descAcesso   = $rows[4];
       }  
    }
+   
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -63,7 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="admin.php">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="admin.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <?php 
             if($tipoAcesso != 3) {
@@ -71,9 +72,9 @@
               <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown09">
-                  <a class="dropdown-item" href="#">Cadastrar pessoas</a>
-                  <a class="dropdown-item" href="usuario_list2.php">Cadastrar usuários</a>                
-                  <a class="dropdown-item" href="#">Cadastrar pacientes</a>
+                  <a class="dropdown-item" href="#">Cadastro de pessoas</a>
+                  <a class="dropdown-item" href="usuario_list2.php">Cadastro de usuários</a>                
+                  <a class="dropdown-item" href="#">Cadastro de pacientes</a>
                 </div>
               </li>
             <?php
@@ -160,7 +161,10 @@
             <a href="usuario_list2.php" class="btn btn-warning" role="button">Retornar</a>
          </form>
       </div>
-   </div>
+    </div>
+
+
+
 </body>
 <?php
 //encerrando a conexao com mysql

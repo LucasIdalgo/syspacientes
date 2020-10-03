@@ -126,7 +126,7 @@
         <br>
         <?php
         if($tipoAcesso == 1){
-          echo("<a class='btn btn-lg btn-primary' href='usuario.php' role='button'>Novo Usuário</a>");
+          echo("<a class='btn btn-lg btn-primary' href='usuario.php?idUsuario=$id' role='button'>Novo Usuário</a>");
         }
         ?>
       </div>
