@@ -17,7 +17,7 @@
    $email      = $_POST["inputEmail"];
    
    //convertendo nome para maiusculo
-   //$nome = strtoupper($nome);
+   $nome = strtoupper($nome);
    
    if(strlen($id_pessoa) > 0){
       if($id_pessoa != 0){
@@ -37,9 +37,9 @@
                  WHERE id = $id_pessoa";
       }else{
          //insert
-         $sql = "INSERT INTO pessoas( nome, email, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular)
-                               VALUES('$nome', '$email', '$endereco', $numero, '$comp', '$cidade', '$estado', '$cep',
-                               '$dataNasc', '$telefone', '$celular')";
+         $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, 
+         telefone, celular, email) VALUES('$nome', '$endereco', $numero, $comp, '$cidade', '$estado', '$cep',
+                               '$dataNasc', '$telefone', '$celular', '$email')";
       }
       mysqli_query($conexao_bd, $sql);
    }else{

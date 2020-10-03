@@ -33,9 +33,8 @@
    $emailPessoa    = "";
 
    if($idPessoa != 0){
-      $sql = "SELECT p.nome, p.datanascimento, p.cep, p.endereco,
-            p.numero, p.complemento, p.cidade, p.estado, p.telefone, p.celular, p.email FROM pessoas p
-              WHERE p.idPessoa = " . $idPessoa;
+      $sql = "SELECT nome, datanascimento, cep, endereco, numero, complemento, cidade, estado, telefone, celular,
+       email FROM pessoas WHERE idPessoa = " . $idPessoa;
       $resp = mysqli_query($conexao_bd, $sql);
       if($rows=mysqli_fetch_row($resp)){
          $nomePessoa     = $rows[0];      
@@ -64,22 +63,6 @@
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="js/jquery.mask.min.js" rel="stylesheet">
    <link href="js/jquery.min.js" rel="stylesheet">
-
-    <script type="text/javascript">
-      function validaTela(){
-         var resposta = true;
-         var nome = document.getElementById("inputNome").value;
-         if(nome.length > 100){
-            alert('Nome maior que 100 caracteres');
-            resposta = false;
-         }
-         return resposta;
-      }
-      jQuery(function($){
-               $("#inputCEP").mask("00.000-000");
-               $("#inputDataNasc").mask("00/00/0000");
-      });
-    </script>
 </head>
 <body>
    <div class="container">
@@ -217,7 +200,14 @@
                      name="inputEmail" placeholder="E-mail"
                      value="<?php echo($emailPessoa); ?>"
                      >
-            </div>           
+            </div>  
+            <script type="text/javascript">
+                jQuery(
+                    function($){
+                    $("#inputCEP").mask("00.000-000");
+                    $("#inputDataNasc").mask("00/00/0000");
+                });
+            </script>         
             <input type="hidden" id="inputIdPessoa" name="inputIdPessoa" value="<?php echo($idPessoa) ?>">
             <button type="submit" class="btn btn-success">Gravar</button>&nbsp;
             <a href="pessoa_list.php" class="btn btn-warning" role="button">Retornar</a>
