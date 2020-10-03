@@ -146,7 +146,8 @@
             <div class="form-group">
                <label for="inputDataNasc">Data de nascimento:</label>
                <input type="text" class="form-control" id="inputDataNasc" 
-                     name="inputDataNasc" placeholder="Data de nascimento da pessoa" required
+                     name="inputDataNasc" placeholder="Data de nascimento da pessoa" 
+                     max="10" data-mask="00/00/0000" required
                      value="<?php echo($datanascPessoa); ?>"
                      >
             </div>
@@ -154,6 +155,7 @@
                <label for="inputCEP">CEP:</label>
                <input type="text" class="form-control" id="inputCEP" 
                      name="inputCEP" placeholder="CEP do endereco da pessoa"
+                     max="10"
                      value="<?php echo($cepPessoa); ?>"
                      >
             </div>
