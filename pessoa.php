@@ -61,8 +61,13 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link href="js/jquery.mask.min.js" rel="stylesheet">
-   <link href="js/jquery.min.js" rel="stylesheet">
+
+   <script type="text/javascript">                
+        $(document).ready(function(){
+            $("#inputCEP").mask("00.000-000");
+            $("#inputDataNasc").mask("00/00/0000");
+        });
+   </script> 
 </head>
 <body>
    <div class="container">
@@ -200,14 +205,7 @@
                      name="inputEmail" placeholder="E-mail"
                      value="<?php echo($emailPessoa); ?>"
                      >
-            </div>  
-            <script type="text/javascript">
-                jQuery(
-                    function($){
-                    $("#inputCEP").mask("00.000-000");
-                    $("#inputDataNasc").mask("00/00/0000");
-                });
-            </script>         
+            </div>          
             <input type="hidden" id="inputIdPessoa" name="inputIdPessoa" value="<?php echo($idPessoa) ?>">
             <button type="submit" class="btn btn-success">Gravar</button>&nbsp;
             <a href="pessoa_list.php" class="btn btn-warning" role="button">Retornar</a>
