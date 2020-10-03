@@ -17,9 +17,9 @@
 
    $sql = "SELECT nome FROM usuarios WHERE id = " . $id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
-   $rows=mysqli_fetch_row($resp);
-      $nome_usuario = $rows[0];
-      
+   if($rows=mysqli_fetch_row($resp)){
+    $nome_usuario = $rows[0];
+ }  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
