@@ -138,7 +138,7 @@
             </div>
             <div class="form-group">
                <label for="inputDataNasc">Data de nascimento:</label>
-               <input type="text" class="form-control" id="inputDataNasc" 
+               <input type="date" class="form-control" id="inputDataNasc" 
                      name="inputDataNasc" placeholder="Data de nascimento da pessoa" 
                      maxlength="10" required
                      value="<?php echo($datanascPessoa); ?>"
