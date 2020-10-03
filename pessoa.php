@@ -68,6 +68,8 @@
         $(document).ready(function(){
             $("#inputCEP").mask("00.000-000");
             $("#inputDataNasc").mask("00/00/0000");
+            $("#inputTelefone").mask("(00)0000-0000")
+            $("#inputCelular").mask("(00)00000-0000")
         });
    </script> 
 </head>
@@ -192,7 +194,7 @@
                <label for="inputTelefone">Telefone:</label>
                <input type="text" class="form-control" id="inputTelefone" 
                      name="inputTelefone" placeholder="Telefone da pessoa"
-                     maxlenght="10"
+                     maxlenght="13"
                      value="<?php echo($telefonePessoa); ?>"
                      >
             </div>
@@ -200,7 +202,7 @@
                <label for="inputCelular">Celular:</label>
                <input type="text" class="form-control" id="inputCelular" 
                      name="inputCelular" placeholder="Celular" 
-                     maxlength="11" required
+                     maxlength="14" required
                      value="<?php echo($celularPessoa); ?>"
                      >
             </div> 
