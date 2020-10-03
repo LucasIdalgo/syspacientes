@@ -63,12 +63,13 @@
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="js/jquery.mask.min.js" rel="stylesheet">
-   
+   <link href="js/jquery.min.js" rel="stylesheet">
+
     <script type="text/javascript">
       function validaTela(){
          var resposta = true;
          var nome = document.getElementById("inputNome").value;
-         if(nome.length > 6){
+         if(nome.length > 100){
             alert('Nome maior que 100 caracteres');
             resposta = false;
          }
