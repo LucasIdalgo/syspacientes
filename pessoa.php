@@ -61,6 +61,8 @@
    <link rel="icon" href="img/favicon/favicon2.ico">
    <!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <script scr="js/jquery.mask.min.js"></script>
+   <script scr="js/jquery.min.js"></script>
 
    <script type="text/javascript">                
         $(document).ready(function(){
@@ -166,7 +168,7 @@
             </div>
             <div class="form-group">
                <label for="inputComp">Complemento do endereço:</label>
-               <input type="number" class="form-control" id="inputComp" 
+               <input type="text" class="form-control" id="inputComp" 
                      name="inputComp" placeholder="Complemento do endereço da pessoa"
                      value="<?php echo($compPessoa); ?>"
                      >
@@ -189,13 +191,15 @@
                <label for="inputTelefone">Telfone:</label>
                <input type="text" class="form-control" id="inputTelefone" 
                      name="inputTelefone" placeholder="Telefone da pessoa"
+                     maxlenght="10"
                      value="<?php echo($telefonePessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputCelular">Celular:</label>
                <input type="text" class="form-control" id="inputCelular" 
-                     name="inputCelular" placeholder="Celular" required
+                     name="inputCelular" placeholder="Celular" 
+                     maxlength="11" required
                      value="<?php echo($celularPessoa); ?>"
                      >
             </div> 
