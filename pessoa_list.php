@@ -93,7 +93,7 @@
                <tr>
                   <th scope="col">ID</th>
                   <th scope="col">NOME</th>
-                  <th scope="col">DATA NASCIMENTO</th>
+                  <th scope="col">DATA DE NASCIMENTO</th>
                   <th scope="col">CEP</th>
                   <th scope="col">ENDEREÇO</th>
                   <th scope="col">CIDADE</th>

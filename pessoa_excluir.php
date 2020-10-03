@@ -6,7 +6,7 @@
    $idPessoa = $_GET['idPessoa'];
 
    //verifico se é vazio:
-   if(strlen($idUsuario) > 0){
+   if(strlen($idPessoa) > 0){
       $sql = "DELETE FROM pessoas WHERE id = " .$idPessoa;
       mysqli_query($conexao_bd, $sql);
    }else{

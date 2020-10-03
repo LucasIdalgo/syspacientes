@@ -133,15 +133,15 @@
             <div class="form-group">
                <label for="inputNome">Nome da pessoa:</label>
                <input type="text" class="form-control" id="inputNome" 
-                     name="inputNome" placeholder="Nome da pessoa"
+                     name="inputNome" placeholder="Nome da pessoa" required autofocus
                      value="<?php echo($nomePessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputDataNasc">Data de nascimento:</label>
                <input type="text" class="form-control" id="inputDataNasc" 
-                     name="inputDataNasc" placeholder="Data de nascimento da pessoa"
-                     data_mask="##/##/####" maxlength="10"
+                     name="inputDataNasc" placeholder="00/00/0000" title="Data de nascimento da pessoa"
+                     data-mask="00/00/0000" maxlength="10" autocomplete="off" required
                      value="<?php echo($datanascPessoa); ?>"
                      >
             </div>
@@ -149,6 +149,7 @@
                <label for="inputCEP">CEP:</label>
                <input type="text" class="form-control" id="inputCEP" 
                      name="inputCEP" placeholder="CEP do endereco da pessoa"
+                     data_mask="##.###-###" maxlength="10"
                      value="<?php echo($cepPessoa); ?>"
                      >
             </div>
@@ -176,27 +177,27 @@
             <div class="form-group">
                <label for="inputCidade">Cidade:</label>
                <input type="text" class="form-control" id="inputCidade" 
-                     name="inputCidade" placeholder="Cidade da pessoa"
+                     name="inputCidade" placeholder="Cidade da pessoa" required
                      value="<?php echo($cidadePessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputEstado">Estado:</label>
                <input type="text" class="form-control" id="inputEstado" 
-                     name="inputEstado" placeholder="Estado da pessoa"
+                     name="inputEstado" placeholder="Estado da pessoa" required
                      value="<?php echo($estadoPessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputTelefone">Telfone:</label>
-               <input type="text" class="form-control" id="inputTelefone" 
+               <input type="number" class="form-control" id="inputTelefone" 
                      name="inputTelefone" placeholder="Telefone da pessoa"
                      value="<?php echo($telefonePessoa); ?>"
                      >
             </div>
             <div class="form-group">
                <label for="inputCelular">Celular:</label>
-               <input type="text" class="form-control" id="inputCelular" 
+               <input type="number" class="form-control" id="inputCelular" 
                      name="inputCelular" placeholder="Celular"
                      value="<?php echo($celularPessoa); ?>"
                      >
