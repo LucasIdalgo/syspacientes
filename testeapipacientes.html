@@ -75,7 +75,8 @@
                   </tbody>
             </table>  
             <br>
-            <a class='btn btn-lg btn-primary' href='javascript:buscarDados()' role='button'>Buscar dados</a>            
+            <a class='btn btn-lg btn-primary' href='javascript:buscarDados()' role='button'>Buscar dados</a> 
+            <a class='btn btn-lg btn-primary' href='javascript:deletarDados()' role='button'>Deletar dados</a>            
       </div>
     </div>
 
@@ -86,7 +87,47 @@
       function buscarDados(){
          $.ajax({
             type: "POST",
-            dataType: "jsonp",
+            dataType: "json",
+            url: "http://localhost:5000/api/pacientes",
+            success: function(data){
+               var json = $.parseJSON(data);
+               console.log(json.html);
+            },
+            error: function(error){
+               var json = $.parseJSON(error);
+               alert(json.error);
+            }
+         }).fail(
+            function(jqXHR, exception){
+               var msg = "";
+               if(jqXHR.status === 0){
+                  msg = "Não conectado.\n Verifique a sua rede";
+               }else if(jqXHR.status === 413){
+                  msg = "Tamanho da imagem grande.";
+               }else if(jqXHR.status === 404){
+                  msg = "Página não encontrada";
+               }else if(jqXHR.status === 500){
+                  msg = "Erro interno do servidor";
+               }else if(jqXHR.status === 200){
+                  msg = "Consulta efetuada com sucesso!";
+               }
+               else if(exception === 'parseerror'){
+                  msg = "Parse do JSON falhou!";
+               }else if(exception === 'timeout'){
+                  msg = "Erro de TimeOut";
+               }else if(exception === 'abort'){
+                  msg = "Requisição abortada";
+               }else{
+                  msg = "Erro desconhecido: " + jqXHR.responseText;
+               }
+               console.log(msg);
+            }
+         );
+      }
+      function deletarDados(){
+         $.ajax({
+            type: "DELETE",
+            dataType: "json",
             url: "http://localhost:5000/api/pacientes",
             success: function(data){
                var json = $.parseJSON(data);
